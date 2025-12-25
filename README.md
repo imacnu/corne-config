@@ -1,0 +1,2 @@
+# corne-config
+Corne-config
