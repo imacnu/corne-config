@@ -4,11 +4,11 @@
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
 #
-# board: [ "nice_nano_v2" ]
+# board: [ "nice_nano" ]
 # shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: nice_nano
 #     shield: reviung41
 #
 ---
@@ -20,16 +20,16 @@
 ---
 include:
   # Mitad izquierda: Corne + OLED
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_left nice_oled
     artifact-name: corne_left_oled
 
   # Mitad derecha: Corne + trackpad
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_right corne_trackpad
     artifact-name: corne_right_trackpad
 
   # Firmware para resetear ajustes de ZMK (opcional pero muy útil)
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
     artifact-name: settings_reset
