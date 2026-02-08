@@ -12,13 +12,35 @@
 #     shield: reviung41
 #
 ---
+#include:
+ # - board: nice_nano
+  #  shield: sofle_left nice_oled
+   # snippet: studio-rpc-usb-uart
+    #artifact-name: nice_sofle_left_oled
+ # - board: nice_nano
+  #  shield: sofle_right nice_oled
+  #  artifact-name: nice_sofle_right_oled
+ # - board: nice_nano
+  #  shield: settings_reset
+
+
+# Build configuration for Sofle RGB
+# Hardware: Nice!Nano v1 with standard OLED displays
+
+---
 include:
+  # Left half
   - board: nice_nano
-    shield: sofle_left nice_oled
+    shield: sofle_left
     snippet: studio-rpc-usb-uart
-    artifact-name: nice_sofle_left_oled
+    artifact-name: sofle_left
+  
+  # Right half
   - board: nice_nano
-    shield: sofle_right nice_oled
-    artifact-name: nice_sofle_right_oled
+    shield: sofle_right
+    artifact-name: sofle_right
+  
+  # Settings reset
   - board: nice_nano
     shield: settings_reset
+    artifact-name: settings_reset
