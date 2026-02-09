@@ -29,8 +29,3 @@
 &tps43_listener {
     status = "okay";
 };
-```
-
-Es idéntico a tu original porque el dtsi ya tiene todo lo del OLED. No hay que cambiar nada en el overlay, solo asegúrate de añadir esto en `sofle_left.conf`:
-```
-CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=1
