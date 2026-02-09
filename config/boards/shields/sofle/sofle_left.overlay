@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 #include "sofle.dtsi"
 
 &kscan0 {
@@ -19,7 +18,8 @@
 
 / {
     chosen {
-      zmk,battery = &vbatt;
+        zmk,battery = &vbatt;
+        zephyr,display = &oled;
     };
 
     vbatt: vbatt {
@@ -27,6 +27,24 @@
     };
 };
 
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
+
 &tps43_listener {
     status = "okay";
 };
+
